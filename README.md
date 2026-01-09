@@ -33,6 +33,21 @@ npm run lint
 npm run format
 ```
 
+## Deploy to GitHub Pages
+
+This repo is set up to deploy via GitHub Actions (builds `dist/` and publishes it to Pages).
+
+1. Push to the `main` branch.
+2. In GitHub go to **Settings → Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Do **not** choose the **Jekyll** workflow/template. Jekyll is for Jekyll sites and won’t run the Vite build.
+	- If GitHub offers templates like **Static HTML** vs **Jekyll**, choose **Static HTML** (or skip templates entirely).
+	- This repo already contains the workflow at `.github/workflows/deploy.yml`.
+
+Your site URL will be:
+
+`https://<your-username>.github.io/<repo-name>/`
+
 ## Notes
 
 - Model year codes repeat every 30 years; this app supports 1980–2039 as requested.
